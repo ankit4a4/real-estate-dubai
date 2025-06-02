@@ -1,0 +1,202 @@
+.AboutProperty_container {
+  width: 100%;
+  height: auto;
+  padding: 4% 4%;
+  display: flex;
+  gap: 1rem;
+  background-color: var(--gray-color);
+  color: var(--black-color);
+  border-top: 1px solid var(--gray-color);
+}
+/* ////////////////// left /////////////////////// */
+.AboutProperty_left {
+  width: 34%;
+  height: auto;
+}
+.AboutProperty_left p {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  margin-top: 20%;
+  color: gray;
+}
+
+.AboutProperty_left p h4 {
+  width: 30%;
+  height: 1px;
+  color: var(--black-color);
+
+  background-color: gray;
+}
+.AboutProperty_left h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 100%;
+  margin-top: 2%;
+  color: var(--black-color);
+}
+.AboutProperty_left h5 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-top: 6%;
+  color: var(--black-color);
+
+}
+
+.AboutProperty_left button {
+  width: 70%;
+  padding: 4% 0;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  border: 1px solid #071c35;
+  background-color: #071c35;
+  font-size: 1rem;
+  color: white;
+  margin-top: 6%;
+}
+/* ////////////////// RIGHT /////////////////////// */
+
+.AboutProperty_right {
+  width: 66%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.rightBoxLeftDiv {
+  width: 100%;
+  height: auto;
+  display: block;
+  gap: 1rem;
+}
+
+.rightBoxleftDiv_imageBox {
+  height: 85vh;
+}
+.rightBoxleftDiv_imageBox img {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.2rem;
+}
+.rightBoxleftDiv_imageBox p {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--black-color);
+  font-weight: 300;
+}
+.rightBoxleftDiv_imageBox p h3 {
+  width: 25%;
+  height: 1px;
+  background-color: gray;
+}
+
+.rightBoxleftDiv_imageBox2 {
+  height: 40vh;
+}
+.rightBoxleftDiv_imageBox2 img {
+  height: 85%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.2rem;
+}
+.rightBoxleftDiv_imageBox2 p {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  color: var(--black-color);
+}
+.rightBoxleftDiv_imageBox2 p h3 {
+  width: 25%;
+  height: 1px;
+  background-color: gray;
+  color: var(--black-color);
+
+}
+
+.rightBoxRightDiv {
+  width: 100%;
+  height: auto;
+}
+
+/* /////////////////////////// MOBILE VIEW ///////////////////////// */
+
+@media screen and (max-width: 768px) {
+  .AboutProperty_container {
+    flex-direction: column;
+  }
+  /* ////////////////// left /////////////////////// */
+  .AboutProperty_left {
+    width: 100%;
+  }
+  .AboutProperty_left P {
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .AboutProperty_left h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 5%;
+  }
+  .AboutProperty_left h5 {
+    font-size: 1.2rem;
+    margin-top: 6%;
+  }
+
+  .AboutProperty_left button {
+    display: none;
+  }
+  /* ////////////////// RIGHT /////////////////////// */
+
+  .AboutProperty_right {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .rightBoxLeftDiv {
+    width: 100%;
+  }
+
+  .rightBoxleftDiv_imageBox {
+    height: 30vh;
+    margin-bottom: 4%;
+  }
+
+  .rightBoxleftDiv_imageBox img{
+    height: 80%;
+  }
+
+  .rightBoxleftDiv_imageBox2 {
+    height: 30vh;
+  }
+  .rightBoxleftDiv_imageBox2 img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.2rem;
+  }
+  .rightBoxleftDiv_imageBox2 p {
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+    margin-top: 3%;
+  }
+  .rightBoxleftDiv_imageBox2 p h3 {
+    width: 25%;
+    height: 1px;
+    background-color: gray;
+  }
+
+  .rightBoxRightDiv {
+    width: 100%;
+    height: auto;
+  }
+}

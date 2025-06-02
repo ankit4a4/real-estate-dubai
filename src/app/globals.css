@@ -1,0 +1,52 @@
+:root {
+  
+  --theme-color: #1c2d37;
+  --theme-color2: #eed26e;
+  --title-color: #0d0d0c;
+  --title-dark: #364440;
+  --body-color: #6e7070;
+  --smoke-color: #c0cdd1;
+  --smoke-color2: #666666;
+  --black-color: #000000;
+  --black-color2: #1b1b1b;
+  --black-color3: #1a1a1a;
+  --gray-color: #dde8dd;
+  --gray-color2: #e5e4e9;
+  --white-color: #ffffff;
+  --light-color: #a4b5ba;
+  --yellow-color: #e2b93b;
+  --success-color: #27ae60;
+  --error-color: #eb5757;
+  --th-border-color: #cdcdcd;
+  --th-border-color2: #e6e6e6;
+  --title-font: "Outfit", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --icon-font: "Font Awesome 6 Pro";
+  --main-container: 1296px;
+  --container-gutters: 24px;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
+  --section-title-space: 60px;
+  --ripple-ani-duration: 5s;
+  --th-body-background: #ffffff;
+  --lite-white: #c2d6c2;
+}
+
+
+
+body {
+  font-family: "Outfit", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+  font-family: "Outfit", sans-serif;
+  color: black;
+}

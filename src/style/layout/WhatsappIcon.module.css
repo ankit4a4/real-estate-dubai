@@ -1,0 +1,60 @@
+/* WhatsappIcon.module.css */
+
+.floatingIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out;
+}
+
+.floatingIcon:hover {
+  transform: scale(1.1);
+}
+
+.popup {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 8rem;
+  background-color: #25d366;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+  height: 0;
+  z-index: 10000000000;
+}
+
+.popup.open {
+  height: 5rem; 
+}
+
+.popupContent {
+  padding: 15px;
+
+}
+
+.phoneNumber {
+  display: block;
+  color: #fff;
+
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.phoneNumber:hover {
+  text-decoration: underline;
+}

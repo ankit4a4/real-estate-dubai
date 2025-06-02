@@ -1,0 +1,454 @@
+@media (min-width: 768px) {
+  .card {
+    width: 50%;
+  }
+}
+
+/* For extra large screens (xl) */
+@media (min-width: 1200px) {
+  .card {
+    width: 32%;
+  }
+}
+.card {
+  margin-bottom: 2%;
+}
+
+.propertyCardThumb {
+  overflow: hidden;
+  border-radius: 24px;
+  position: relative;
+}
+
+.propertyCardThumb img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.propertyCardThumb:after {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.propertyCardThumb:hover:after {
+  -webkit-animation: imgShine 1s;
+  animation: imgShine 1s;
+}
+
+@-webkit-keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+
+@media (max-width: 991px) {
+  .propertyCardThumb img {
+    height: 350px;
+  }
+}
+
+.propertyCard .property-card-meta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 30px;
+  border-bottom: 1px solid rgba(28, 45, 55, 0.2);
+  padding-bottom: 22px;
+  margin-bottom: -8px;
+  /* Medium devices */
+}
+
+@media (max-width: 991px) {
+  .propertyCard .property-card-meta {
+    gap: 20px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+.propertyCard .property-card-meta span {
+  color: var(--theme-color);
+  font-size: 16px;
+  font-family: var(--body-font);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  border-right: 1px solid rgba(28, 45, 55, 0.2);
+  padding-right: 26px;
+  margin-right: 26px;
+  /* Extra large devices */
+  /* Medium Large devices */
+  /* Medium Large devices */
+}
+
+@media (max-width: 1500px) {
+  .propertyCard .property-card-meta span {
+    padding-right: 34px;
+    margin-right: 33px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .propertyCard .property-card-meta span {
+    padding-right: 28px;
+    margin-right: 27px;
+  }
+}
+
+@media (max-width: 1299px) {
+  .propertyCard .property-card-meta span {
+    border-right: 0;
+    padding-right: 0;
+    margin-right: 20px;
+  }
+}
+
+.propertyCard .property-card-meta span:last-child {
+  border-right: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.propertyCard .propertyCardDetails {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /* Medium Large devices */
+  /* Large devices */
+  /* Medium devices */
+  /* Small devices */
+  /* Extra small devices */
+}
+
+@media (max-width: 1299px) {
+  .propertyCard .propertyCardDetails {
+    gap: 25px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .propertyCard .propertyCardDetails .mediaLeft {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .propertyCard .propertyCardDetails .mediaLeft {
+    width: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .propertyCard .propertyCardDetails .mediaLeft {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .propertyCard .propertyCardDetails .mediaLeft {
+    width: auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .propertyCard .propertyCardDetails .mediaLeft {
+    width: 100%;
+  }
+}
+
+.propertyCardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--theme-color);
+  margin-bottom: 13px;
+  margin-top: -0.3em;
+}
+.link {
+  text-decoration: none;
+  color: var(--theme-color);
+}
+.propertyCardPrice {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--theme-color);
+  margin-bottom: 11px;
+}
+
+.propertyCardLocation {
+  font-size: 16px;
+  font-family: var(--title-font);
+  color: var(--theme-color);
+  margin-bottom: -0.3em;
+}
+
+.propertyCard:hover .propertyCardThumb img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.btnWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px 30px;
+}
+
+.thBtn {
+  border: 1px solid var(--theme-color);
+  padding: 16px 30px;
+  color: var(--theme-color);
+  background: transparent;
+  text-decoration: none;
+  outline: 0;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  min-width: 125px;
+  border-radius: 50px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.thBtn:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: -webkit-linear-gradient(
+    330deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.3;
+}
+
+.thBtn:after {
+  content: "";
+  position: relative;
+  background-image: url(../../../public/icon/arrow-right.svg);
+  background-size: 100% 100%;
+  -webkit-filter: brightness(4);
+  filter: brightness(4);
+  color: var(--theme-color);
+  width: 22px;
+  height: 22px;
+  transition: 0.4s;
+}
+.thBtn:hover {
+  background-color: var(--theme-color);
+  color: var(--white-color);
+}
+.thBtn:hover:after {
+  color: var(--white-color);
+  filter: brightness(100);
+}
+
+/* /////////////////////////////////////// mobile view /////////////////////////////////// */
+
+@media screen and (max-width: 768px) {
+  /* For extra large screens (xl) */
+
+  .card {
+    margin-bottom: 5%;
+  }
+
+  .propertyCardThumb {
+    height: 300px;
+    border: 1px solid var(--theme-color);
+  }
+  .propertyCard .propertyCardDetails {
+    flex-direction: column;
+    width: 95vw;
+    text-align: start;
+    align-items: start;
+  }
+
+  .propertyCardTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--theme-color);
+    margin-bottom: 13px;
+    margin-top: -0.3em;
+  }
+  .link {
+    text-decoration: none;
+    color: var(--theme-color);
+  }
+  .propertyCardPrice {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--theme-color);
+    margin-bottom: 11px;
+  }
+
+  .propertyCardLocation {
+    font-size: 16px;
+    font-family: var(--title-font);
+    color: var(--theme-color);
+    margin-bottom: -0.3em;
+  }
+
+  .propertyCard:hover .propertyCardThumb img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .btnWrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 20px 30px;
+  }
+
+  .thBtn {
+    border: 1px solid var(--theme-color);
+    padding: 10px 20px;
+    color: var(--theme-color);
+    background: transparent;
+    text-decoration: none;
+    outline: 0;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    min-width: 125px;
+    border-radius: 50px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .thBtn:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: -webkit-linear-gradient(
+      330deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.3;
+  }
+
+  .thBtn:after {
+    content: "";
+    position: relative;
+    background-image: url(../../../public/icon/arrow-right.svg);
+    background-size: 100% 100%;
+    -webkit-filter: brightness(4);
+    filter: brightness(4);
+    color: var(--theme-color);
+    width: 22px;
+    height: 22px;
+    transition: 0.4s;
+  }
+  .thBtn:hover {
+    background-color: var(--theme-color);
+    color: var(--white-color);
+  }
+  .thBtn:hover:after {
+    color: var(--white-color);
+  }
+}

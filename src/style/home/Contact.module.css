@@ -1,0 +1,282 @@
+.contactSec {
+  background-color: var(--gray-color);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  height: auto;
+}
+
+.contactArea {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.contactForm {
+  width: 50%;
+  padding: 0 30px;
+}
+
+.contactFormContainer {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.titleArea {
+  margin-bottom: calc(var(--section-title-space) - 11px);
+  position: relative;
+  z-index: 2;
+}
+
+.secTitle {
+  margin-bottom: 3px;
+  margin-top: -0.3em;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 1.333;
+  color: var(--title-color);
+  text-transform: none;
+  margin: 0 0 15px 0;
+}
+
+.titleArea p {
+  font-family: var(--body-font);
+  margin: 0 0 18px 0;
+  color: var(--body-color);
+  line-height: 1.75;
+  font-size: 1.2rem;
+}
+
+.aboutContactGrid {
+  display: flex;
+  gap: 16px;
+  border: 1px solid #97ae97;
+  border-radius: 16px;
+  padding: 24px 24px 18px;
+  transition: 0.4s;
+  margin-bottom: 15px;
+  font-family: var(--body-font);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--black-color);
+  line-height: 26px;
+}
+
+.aboutContactGrid:hover {
+  box-shadow: 0px 15px 30px rgba(176, 198, 176, 0.5);
+  border-color: transparent;
+}
+
+.aboutContactIcon {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  width: 6vh;
+  height: 6vh;
+  line-height: 40px;
+  text-align: center;
+  background: var(--title-dark);
+  border-radius: 50%;
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+ .aboutContactDetailsTitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: -0.3em;
+  margin-bottom: 4px;
+  font-family: var(--title-font);
+  color: var(--title-color);
+  text-transform: none;
+}
+
+.aboutContactDetailsText {
+  font-family: var(--body-font);
+  margin: 0 0 18px 0;
+  color: var(--body-color);
+  line-height: 1.75;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+.aboutContactDetailsText .link {
+  color: var(--theme-color);
+  text-decoration: none;
+  outline: 0;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+  text-decoration: none;
+}
+
+.locationMap {
+  width: 50%;
+  height: auto;
+}
+
+.locationMapAddress {
+  border-radius: 10px;
+  background: var(--theme-color);
+  overflow: hidden;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 16px;
+  gap: 1.3vw;
+  width: 20%;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  min-height: 15%;
+  right: 10%;
+}
+
+.locationMap .locationMapAddress .thumb {
+  width: 30%;
+  height: 4rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--gray-color);
+}
+.media_body {
+  width: 70%;
+}
+
+.locationMap .locationMapAddress .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.locationMap .locationMapAddress .title {
+  color: var(--white-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-family: var(--body-font);
+}
+
+.locationMap .locationMapAddress .text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--gray-color);
+  margin-bottom: 4%;
+  font-family: var(--body-font);
+}
+
+.locationMap .locationMapAddress .text:last-child {
+  margin-bottom: 0;
+}
+
+.contactMap {
+  line-height: 0px;
+  margin: 0 auto;
+}
+
+.contactMap iframe {
+  width: 100%;
+  border: none;
+  height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .secTitle {
+    font-size: 2rem;
+    text-align: start;
+  }
+  
+  .titleArea p {
+    font-size: 1rem;
+    text-align: start;
+  }
+  
+  .contactArea {
+    display: block;
+  }
+
+  .contactForm {
+    width: 100%;
+    padding: 0 3%;
+    margin-top: 5%;
+  }
+
+  .contactFormContainer {
+    padding: 0px;
+  }
+
+  .titleArea {
+    margin-bottom: calc(var(--section-title-space) - 11px);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .locationMap {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .locationMapAddress {
+    width: 50%;
+    padding: 2%;
+    padding-bottom: 0;
+    top: 76%;
+    left: 25%;
+    height: auto;
+    gap: 1rem;
+   
+  }
+
+  .locationMap .locationMapAddress .thumb {
+    width: 30%;
+    height: 4rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--gray-color);
+  }
+
+  .locationMap .locationMapAddress .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .locationMap .locationMapAddress .title {
+    color: var(--white-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    font-family: var(--body-font);
+  }
+
+  .locationMap .locationMapAddress .text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--gray-color);
+    margin-bottom: 4%;
+    font-family: var(--body-font);
+  }
+
+  .locationMap .locationMapAddress .text:last-child {
+    margin-bottom: 0;
+  }
+
+  .contactMap {
+    line-height: 0px;
+    margin: 0 auto;
+  }
+
+  .contactMap iframe {
+    width: 100%;
+    border: none;
+    height: 100vh;
+  }
+  .media_body {
+    width: 70%;
+  }
+}

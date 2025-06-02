@@ -1,0 +1,195 @@
+.showCaseSec {
+  position: relative;
+  background-color: var(--gray-color);
+  overflow: hidden;
+  padding-bottom: var(--section-space);
+  padding-top: var(--section-space);
+}
+.spin {
+  position: absolute;
+  top: 7%;
+  right: 15%;
+  display: block;
+  -webkit-animation: spin 10s linear infinite;
+  animation: spin 10s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 1199px) {
+  .spin {
+    display: none;
+  }
+}
+.slider {
+  display: flex;
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+  overflow-x: auto;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.instaBox {
+  position: relative;
+  border-radius: 24px;
+  height: 25vw;
+  width: 25vw;
+  overflow: hidden;
+}
+
+.instaBox:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--title-dark);
+  opacity: 0.2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.instaBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.iconBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+  height: auto;
+  width: auto;
+  border: 0;
+  line-height: normal;
+  font-size: 1.6rem;
+  color: var(--white-color);
+  background: transparent;
+}
+
+.iconBtn:hover {
+  color: var(--theme-color2);
+}
+
+.instaBox:hover:after {
+  opacity: 0.5;
+}
+
+.instaBox:hover .iconBtn {
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%) scale(1.5);
+  -ms-transform: translate(50%, -50%) scale(1.5);
+  transform: translate(50%, -50%) scale(1.5);
+}
+
+/* ///////////////////////////////////////////// Mobile View ///////////////////////////////////////////// */
+
+@media screen and (max-width: 768px) {
+  .showCaseSec {
+    position: relative;
+    background-color: var(--gray-color);
+    overflow: hidden;
+    padding-bottom: 3%;
+    padding-top: 3%;
+  }
+  .spin {
+    position: absolute;
+    top: 7%;
+    right: 15%;
+    display: block;
+    -webkit-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+    display: none;
+  }
+
+  .slider {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-left: 1.5%;
+    gap: 1rem;
+    overflow-x: auto;
+  }
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .instaBox {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 50vh;
+    width: 97vw;
+    overflow: hidden;
+  }
+
+  .instaBox:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--title-dark);
+    opacity: 0.2;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .instaBox img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .iconBtn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    height: auto;
+    width: auto;
+    border: 0;
+    line-height: normal;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    background: transparent;
+  }
+
+  .iconBtn:hover {
+    color: var(--theme-color2);
+  }
+
+  .instaBox:hover:after {
+    opacity: 0.5;
+  }
+
+  .instaBox:hover .iconBtn {
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%) scale(1.5);
+    -ms-transform: translate(50%, -50%) scale(1.5);
+    transform: translate(50%, -50%) scale(1.5);
+  }
+}

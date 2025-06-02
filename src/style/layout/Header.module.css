@@ -1,0 +1,549 @@
+.headerLayout {
+  position: relative;
+  z-index: 41;
+  padding: 0 5%;
+  background-color: var(--gray-color);
+}
+
+.headerLayout .icon-btn {
+  border-radius: 99px;
+}
+
+.menuArea {
+  position: relative;
+  z-index: 2;
+}
+
+.stickyWrapper {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.sticky-wrapper.sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--theme-color);
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.07));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.07));
+  -webkit-animation: stickyAni 0.4s ease-in-out;
+  animation: stickyAni 0.4s ease-in-out;
+}
+
+.mainMenu a {
+  color: var(--title-color);
+}
+
+.mainMenu ul li:has(.sub-menu) > a:after,
+.mainMenu ul li:has(.mega-menu) > a:after,
+.mainMenu ul li.menu-item-has-children > a:after {
+  color: var(--title-color);
+}
+
+.mainMenu > ul > li > a:hover {
+  color: var(--theme-color);
+  text-shadow: 0px 0px 0px var(--theme-color), 0px 0px 0px var(--theme-color),
+    0px 0px 0px var(--theme-color);
+}
+
+.headerLayout .sticky-wrapper.sticky {
+  background: var(--white-color);
+}
+
+.headerLayout .th-menu-toggle.sidebar-btn {
+  width: 56px;
+  background: var(--title-dark);
+}
+
+.headerLayout .header-button .th-btn {
+  padding: 13px 24px;
+}
+
+.mainMenu > ul > li > a:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: 0;
+  background: var(--title-color);
+  width: 0%;
+  margin-top: 30px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.mainMenu > ul > li > a:hover:before {
+  width: 100%;
+}
+
+@media (min-width: 1600px) {
+  .headerLayout {
+    --main-container: 1760px;
+  }
+}
+
+.firstDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.colAuto {
+  width: auto;
+  display: inline-block;
+}
+
+
+
+.headerLogo img {
+  padding: 0.5% 0;
+  height: 14vh;
+  width: auto;
+  object-fit: contain;
+}
+.propertyDropdown_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.propertyDropdown_header span{
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--title-color);
+}
+/* Medium devices */
+@media (max-width: 991px) {
+  .header-logo {
+    padding-top: 16.5px;
+    padding-bottom: 16.5px;
+  }
+
+  .header-button {
+    margin: 22px 0;
+  }
+}
+
+.mainMenu a {
+  display: block;
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: var(--body-font);
+  /* color: var(--white-color); */
+}
+
+.mainMenu a:hover {
+  color: var(--theme-color2);
+}
+
+.mainMenu > ul > li {
+  margin: 0 22px;
+}
+
+.mainMenu > ul > li > a {
+  /* padding: 46.5px 0; */
+}
+
+.mainMenu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.mainMenu ul li {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+}
+
+.headerButton {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.headerButton .icon-btn .badge {
+  font-size: 12px;
+  top: 0;
+  right: 0;
+}
+
+/* Container for the dropdown */
+.property {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdownMenu {
+  display: none !important;
+  position: absolute !important;
+  background-color: #fff !important;
+  min-width: 160px !important;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2) !important;
+  z-index: 1 !important;
+  border-radius: 5px !important;
+  top: 100% !important;
+  left: 0 !important;
+}
+
+/* Dropdown items */
+.dropdownContent {
+  color: black !important;
+  padding: 8px 16px !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+/* Hover effect for dropdown items */
+.dropdownContent:hover {
+  background-color: #f1f1f1 !important;
+  transition: background-color 0.3s ease !important;
+}
+
+/* Show the dropdown menu on hover */
+.property:hover .dropdownMenu {
+  display: block !important;
+}
+
+/* Optional: Animation effect for the dropdown */
+.property:hover .dropdownMenu {
+  animation: slideDown 0.3s ease-out !important;
+}
+
+/* Animation for smooth dropdown slide-in */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.headerButton .th-btn {
+  padding: 16px 24px;
+}
+.headerArrow {
+  -webkit-filter: brightness(9);
+  filter: brightness(80);
+}
+.reqButton {
+  background: var(--title-color);
+  color: var(--white-color);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  vertical-align: middle;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: none;
+  text-align: center;
+  background-color: var(--theme-color);
+  color: var(--white-color);
+  font-family: var(--body-font);
+  font-size: 16px;
+  font-weight: 500;
+  /* line-height: 1; */
+  padding: 18.5px 24px;
+  min-width: 125px;
+  border-radius: 50px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+}
+.mobileViewContainer {
+  display: none;
+}
+
+.headerButton span {
+  font-size: 6vh;
+  cursor: pointer;
+}
+
+.MobileView {
+  display: none;
+}
+
+.headerLayout {
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white; /* Add background color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+/* ////////////////////////////////// mobile view ////////////////////////////////// */
+/* In Header.module.css */
+.dropdownContentMobile {
+  display: block;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  padding: 0px;
+  margin-top: 2%;
+}
+
+.dropdownItem {
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+.SelectBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.arrowIcon {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .headerLayout {
+    position: relative;
+    z-index: 41;
+    width: 100%;
+    padding: 0 3%;
+  }
+  .MobileView {
+    display: block;
+  }
+  .firstDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .headerLogo {
+    width: 70%;
+    object-fit: contain;
+    order: 1;
+  }
+  .headerLogo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .colAuto {
+    width: auto;
+    display: inline-block;
+    order: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .headerButton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    order: 2;
+  }
+
+  .headerLayout .icon-btn {
+    border-radius: 99px;
+  }
+
+  .menuArea {
+    position: relative;
+    z-index: 2;
+  }
+
+  .stickyWrapper {
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+  }
+
+  .sticky-wrapper.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--theme-color);
+    -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.07));
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.07));
+    -webkit-animation: stickyAni 0.4s ease-in-out;
+    animation: stickyAni 0.4s ease-in-out;
+  }
+
+  .mainMenu a {
+    color: var(--title-color);
+  }
+
+  .mainMenu ul li:has(.sub-menu) > a:after,
+  .mainMenu ul li:has(.mega-menu) > a:after,
+  .mainMenu ul li.menu-item-has-children > a:after {
+    color: var(--title-color);
+  }
+
+  .mainMenu > ul > li {
+    margin: 0 22px;
+  }
+
+  .mainMenu > ul > li > a {
+    /* padding: 46.5px 0; */
+  }
+
+  .mainMenu {
+    background-color: black;
+    width: 100%;
+    display: none;
+  }
+
+  .mainMenu ul {
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    position: absolute;
+    left: 0;
+    top: 11vh;
+  }
+  .dropdownMenu {
+    width: 100%;
+  }
+  .dropdownContent {
+    color: black !important;
+    padding: 8px 0px !important;
+    text-decoration: none !important;
+    display: block !important;
+  }
+
+  .mainMenu ul li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-top: 8%;
+  }
+
+  .headerButton .icon-btn .badge {
+    font-size: 12px;
+    top: 0;
+    right: 0;
+  }
+
+  .headerButton .icon-btn:hover .badge {
+    background-color: var(--title-dark);
+  }
+
+  .headerButton .th-btn {
+    padding: 16px 24px;
+  }
+  .headerArrow {
+    -webkit-filter: brightness(9);
+    filter: brightness(80);
+  }
+  .reqButton {
+    display: none;
+  }
+
+  /* ////////////////////////////// nav link /////////////////// */
+
+  .mobileViewContainer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.599);
+    z-index: 1000;
+  }
+
+  .mobileView_leftBox {
+    width: 70%;
+    height: 100%;
+    background-color: var(--white-color);
+    position: relative;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    transition: left 0.3s ease-in-out; /* Smooth transition for sliding */
+  }
+
+  .mobileView_Logo {
+    height: 15%;
+    width: 100%;
+    background-color: var(--gray-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .mobileView_Logo span {
+    position: absolute;
+    font-size: 3vh;
+    padding: 2%;
+    background-color: var(--theme-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    right: -4vw;
+    top: 20%;
+    cursor: pointer;
+  }
+
+  .mobileView_Logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .mobileView_Link {
+    margin-top: 3%;
+    padding: 3% 8%;
+  }
+
+  .mobileView_Link ul {
+    margin-top: 5%;
+  }
+  .mobileView_Link ul li {
+    margin-top: 5%;
+    list-style: none;
+    font-size: 2.3vh;
+  }
+
+  .mobileView_Link ul a {
+    color: var(--black-color);
+  }
+
+  .Select {
+    border: none;
+    width: 80%;
+    font-size: 2.3vh;
+  }
+  .ToggleButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  
+}

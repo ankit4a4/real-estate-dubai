@@ -1,0 +1,267 @@
+.appointmentContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+  height: auto;
+  padding: 6% 4%;
+  background-color: var(--title-dark);
+  position: relative;
+}
+
+.firstDiv {
+  width: 45%;
+  height: auto;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.firstDiv img {
+  height: 100%;
+  width: 100%;
+}
+.secDiv {
+  width: 55%;
+  height: auto;
+}
+
+.titleArea {
+  width: 100%;
+}
+
+.titleArea h2 {
+  color: var(--white-color);
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+.formInputContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.formInput {
+  width: 50%;
+  position: relative;
+  height: auto;
+  margin-top: 7%;
+}
+.formInput input {
+  width: 100%;
+  padding: 4.5% 5%;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--white-color);
+  border-radius: 2rem;
+  border: 1px solid var(--white-color);
+}
+.formInput2{
+   width: 50%;
+  position: relative;
+  height: auto;
+  margin-top: 4%;
+  width: 100%;
+}
+.formInput2 input {
+  width: 100%;
+  padding: 2.5% 2.3%;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--white-color);
+  border-radius: 2rem;
+  border: 1px solid var(--white-color);
+}
+
+.formInput input::placeholder {
+  color: var(--white-color);
+}
+.formInput2 input::placeholder {
+  color: var(--white-color);
+}
+
+.selectContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 3%;
+}
+.selectContainer select {
+  width: 100%;
+  padding: 2.5% 2.5%;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--white-color);
+  border-radius: 2rem;
+  border: 1px solid var(--white-color);
+}
+.selectContainer select option {
+  color: var(--black-color);
+}
+
+.textArea {
+  margin-top: 3%;
+  width: 100%;
+  height: auto;
+}
+
+.textArea textarea {
+  width: 100%;
+  padding: 2% 2%;
+  height: 25vh;
+  resize: none;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--white-color);
+  border-radius: 1rem;
+  border: 1px solid var(--white-color);
+}
+.textArea textarea::placeholder {
+  color: var(--white-color);
+}
+.submitBtn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 2% 5%;
+  padding-right: 9%;
+  background-color: transparent;
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+  border-radius: 2rem;
+  margin-top: 5%;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.submitBtn img {
+  height: 3.3vh;
+  width: auto;
+  object-fit: contain;
+  margin-top: 2%;
+  -webkit-filter: brightness(9);
+  filter: brightness(80);
+  transition: 0.5s;
+  position: absolute;
+  top: 15%;
+}
+
+.submitBtn:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+.submitBtn:hover img {
+  object-fit: contain;
+  -webkit-filter: brightness(0);
+  filter: brightness(0);
+}
+.submitBtn:after {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(32, 32, 32, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(15, 15, 15, 0.3) 100%
+  );
+  -webkit-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.submitBtn:hover:after {
+  -webkit-animation: imgShine 1s;
+  animation: imgShine 1s;
+}
+
+@-webkit-keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+
+/* ///////////////////////////////// MOBILE VIEW //////////////////////////////// */
+
+@media screen and (max-width: 768px) {
+  .appointmentContainer {
+    display: block;
+  }
+
+  .firstDiv {
+    width: 100%;
+  }
+.formInput2 input{
+  padding: 3% 5%;
+}
+.textArea textarea{
+  padding: 3% 5%;
+
+}
+  .secDiv {
+    width: 100%;
+  }
+
+  .titleArea {
+    width: 100%;
+  }
+
+  .titleArea h2 {
+    font-size: 1.5rem;
+    margin-top: 5%;
+  }
+  .formInputContainer {
+    display: block;
+    gap: 2%;
+  }
+  .formInput {
+    width: 100%;
+    position: relative;
+    height: auto;
+    margin-top: 3%;
+  }
+  .formInput input {
+    width: 100%;
+    padding: 3% 5%;
+    font-size: 1rem;
+  }
+  .formInput input::placeholder {
+    color: var(--white-color);
+  }
+
+  .selectContainer {
+    width: 100%;
+    height: auto;
+    margin-top: 3%;
+  }
+
+  .textArea textarea {
+    height: 15vh;
+  }
+  .textArea textarea::placeholder {
+    color: var(--white-color);
+  }
+  .submitBtn {
+    display: flex;
+    padding: 3% 8%;
+    padding-right: 15%;
+  }
+  .submitBtn img {
+    height: 3vh;
+  }
+  
+}

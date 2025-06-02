@@ -1,0 +1,114 @@
+.aboutContainer{
+  background-color: var(--gray-color);
+  padding: 160px 0;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/19/15/03/buildings-1839726_1280.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.aboutContainer:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--theme-color);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.breadcumbTitle {
+  margin: -0.20em 0 -0.18em 0;
+  line-height: 1.1;
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--white-color);
+  word-break: break-word;
+
+}
+
+.breadcumbMenu {
+  width: 100%;
+  padding: 0;
+  margin: 26px 0 -0.5em 0;
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5%;
+}
+
+.breadcumbMenu li {
+  display: inline-block;
+  margin-right: 5px;
+  padding-right: 3px;
+  list-style: none;
+  position: relative;
+}
+.icon{
+  color: var(--white-color);
+}
+
+
+.breadcumbMenu li:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.breadcumbMenu li:last-child:after {
+  display: none;
+}
+
+.breadcumbMenu li,
+.breadcumbMenu a,
+.breadcumbMenu span {
+  white-space: normal;
+  color: inherit;
+  word-break: break-word;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+.breadcumbMenu a:hover {
+  color: var(--theme-color2);
+}
+
+/* Large devices */
+@media (max-width: 1199px) {
+  .breadcumbMenu li,
+  .breadcumbMenu a,
+  .breadcumbMenu span {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices */
+@media (max-width: 991px) {
+  .aboutContainer {
+    padding: 140px 0;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 575px) {
+  .breadcumbTitle {
+    font-size: 34px;
+  }
+  .aboutContainer {
+    padding: 120px 0;
+  }
+}
+
+.aboutContent{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.aboutInfo{
+width: 100%;
+}

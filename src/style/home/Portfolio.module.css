@@ -1,0 +1,362 @@
+.ProjectContainer {
+  width: 100%;
+  height: auto;
+  padding: 6% 0;
+  background-color: var(--title-dark);
+  position: relative;
+}
+.ProjectHeadingContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  gap: 2rem;
+  padding: 0 4%;
+}
+.ProjectHeadingBox {
+  width: 50%;
+  height: auto;
+}
+.ProjectHeadingBox h1 {
+  font-size: 2.8rem;
+  color: var(--white-color);
+}
+.ProjectHeadingBox p {
+  font-size: 1.2rem;
+  line-height: 4vh;
+  margin-top: 2%;
+  color: var(--smoke-color);
+}
+.ProjectBtnBox {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ProjectBtnBox a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ProjectBtnBox button {
+  padding: 2.5% 3%;
+  font-size: 1rem;
+  border-radius: 3rem;
+  background-color: transparent;
+  color: var(--white-color);
+  gap: 0.5rem;
+  display: flex;
+  border: 1px solid var(--white-color);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+
+.ProjectBtnBox button:after {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  -webkit-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.ProjectBtnBox button:hover:after {
+  -webkit-animation: imgShine 1.5s;
+  animation: imgShine 1.5s;
+}
+
+@-webkit-keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes imgShine {
+  100% {
+    left: 125%;
+  }
+}
+
+.ProjectBtnBox button img {
+  height: 2.2vh;
+  width: auto;
+  object-fit: contain;
+  -webkit-filter: brightness(9);
+  filter: brightness(80);
+}
+
+.ProjectBtnBox button:hover {
+  background-color: var(--white-color);
+  border: 1px solid var(--white-color);
+  color: var(--black-color);
+}
+.ProjectBtnBox button:hover .img {
+  -webkit-filter: brightness(2);
+  filter: brightness(2);
+}
+
+.jump {
+  position: absolute;
+  bottom: 7%;
+  left: 3%;
+  display: block;
+  -webkit-animation: jumpAni 7s linear infinite;
+  animation: jumpAni 7s linear infinite;
+  filter: brightness(80);
+  z-index: 1;
+}
+
+@-webkit-keyframes jumpAni {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes jumpAni {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1199px) {
+  .jump {
+    display: none;
+  }
+}
+
+/* /// --- card css --- /// */
+
+.allCardContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 3%;
+  position: relative;
+}
+.project_AllCards {
+  display: flex;
+  width: 96%;
+  height: auto;
+  margin-left: 4%;
+  padding-bottom: 6%;
+  gap: 3rem;
+  overflow-x: auto;
+  background-color: var(--title-dark);
+  position: relative;
+}
+.project_card_Img:after {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  -webkit-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+.project_card_Img:hover:after {
+  -webkit-animation: imgShine 1.5s;
+  animation: imgShine 1.5s;
+}
+
+.project_AllCards::-webkit-scrollbar {
+  display: none;
+}
+.project_card {
+  min-width: 30vw;
+  max-width: 30vw;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+.project_card h1 {
+  color: var(--white-color);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 4%;
+}
+
+.project_card p {
+  color: var(--smoke-color);
+  font-size: 1.2rem;
+  margin-top: 2%;
+}
+
+.project_card_Img {
+  width: 100%;
+  height: 30vw;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.project_card_Img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  transition: 0.5s;
+  opacity: 0;
+}
+.project_card:hover .project_card_Img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10%;
+  background-color: rgba(0, 0, 0, 0.316);
+  backdrop-filter: blur(2);
+  opacity: 0.5;
+  border-radius: 0.5rem;
+}
+
+.leftArrow {
+  height: 4vw;
+  width: 4vw;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  top: 30%;
+  left: 2%;
+  cursor: pointer;
+}
+
+.leftArrow img {
+  height: 30%;
+  width: 30%;
+  object-fit: contain;
+  transform: scale(-1);
+  cursor: pointer;
+}
+
+/* /////////////////////////////////////////////////// mobile view //////////////////////////////////////////////// */
+
+@media screen and (max-width: 767px) {
+  .ProjectHeadingContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3%;
+  }
+  .ProjectHeadingBox {
+    width: 100%;
+    text-align: center;
+    height: auto;
+  }
+
+  .ProjectBtnBox {
+    width: 100%;
+    justify-content: center;
+  }
+  .ProjectBtnBox a {
+    justify-content: start;
+  }
+
+  .ProjectBtnBox button img {
+    height: 2vh;
+  }
+
+  .jump {
+    display: none;
+  }
+
+  /* /// --- card css --- /// */
+
+  .project_AllCards {
+    display: flex;
+    width: 96%;
+    padding: 0%;
+    position: relative;
+    margin-left: 0%;
+  }
+
+  .project_card {
+    min-width: 95%;
+    max-width: 95%;
+  }
+
+  .project_card_Img {
+    width: 100%;
+    height: 50vw;
+  }
+
+  .leftArrow {
+    display: none;
+  }
+  .ProjectHeadingBox h1 {
+    font-size: 2.3rem;
+  }
+  .ProjectHeadingBox p {
+    font-size: 1rem;
+    line-height: 3vh;
+  }
+  .project_card h1 {
+    font-size: 1.3rem;
+  }
+  
+  .project_card p {
+    color: var(--smoke-color);
+    font-size: 1rem;
+    margin-top: 2%;
+  }
+  
+}

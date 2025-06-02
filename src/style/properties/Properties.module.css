@@ -1,0 +1,568 @@
+.propertiContainer {
+  padding-bottom: calc(var(--section-space) - 30px);
+  padding-top: var(--section-space);
+  background-color: var(--smoke-color);
+  padding-left: 5%;
+  padding-right: 5%;
+  position: relative;
+}
+
+/* //////////////////////////// filter css ////////////////////////////////// */
+
+.searchForm {
+  display: flex;
+  border: 1px solid var(--theme-color);
+  border-radius: 16px;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 20px;
+  margin-bottom: 64px;
+  position: relative;
+}
+.searchForm input {
+  width: 17%;
+  padding: 1% 0.5%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--theme-color);
+  background-color: transparent;
+}
+
+.rent {
+  display: flex;
+  border: 1px solid var(--theme-color);
+}
+.rent p {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.PriceBtn {
+  background-color: var(--theme-color);
+  color: var(--white-color);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 1px solid var(--theme-color);
+  padding: 10px 4%;
+  font-size: 1rem;
+}
+
+.selectPriceBox {
+  position: absolute;
+  top: 120%;
+  z-index: 3;
+  width: 40%;
+  right: 4%;
+  background-color: var(--theme-color);
+  color: var(--white-color);
+  padding: 2%;
+  border-radius: 0.5rem;
+}
+.selectPriceBox::after {
+  content: "";
+  height: 4vh;
+  width: 4vh;
+  position: absolute;
+  background-color: var(--theme-color);
+  top: -2vh;
+  transform: rotate(-45deg);
+  left: 47%;
+}
+
+.selectPriceBox p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3%;
+  font-size: 1rem;
+}
+
+.selectPriceBox input {
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.searchForm select {
+  width: 17%;
+  padding: 1% 0.5%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--theme-color);
+  background-color: transparent;
+}
+
+/* //////////////////////////// filter css  end////////////////////////////////// */
+
+.iconSearch {
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: var(--theme-color);
+}
+
+.formControl {
+  font-weight: 400;
+  line-height: 1.5;
+  display: block;
+  transition: 0.4s ease-in-out;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  padding: 0 25px 0 25px;
+  border: 0;
+  background: transparent;
+  color: var(--theme-color);
+  padding-right: 20px;
+}
+
+.formControl:focus {
+  outline: none;
+}
+
+.formSelect {
+  background-color: transparent;
+  border: 0;
+  color: var(--theme-color);
+  max-width: 200px;
+  border-radius: 0;
+  border-left: 1px solid var(--theme-color);
+  height: 18px;
+  line-height: 18px;
+  appearance: none;
+  cursor: pointer;
+  padding: 0 25px 0 25px;
+  padding-right: 45px;
+  font-weight: 400;
+  font-size: 16px;
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 26px center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+  display: block;
+  width: 100%;
+}
+
+.formSelect:focus {
+  outline: none;
+}
+
+.thBtn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 44px;
+  align-items: center;
+  gap: 8px;
+  min-width: 125px;
+  border-radius: 50px;
+  -webkit-box-pack: center;
+  line-height: 1;
+  display: inline-flex;
+  border: none;
+  text-align: center;
+  background-color: var(--theme-color);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  vertical-align: middle;
+  color: var(--white-color);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1299px) {
+  .formGroup {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .searchForm {
+    display: block;
+    padding: 0;
+  }
+
+  .searchFormlabel {
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .formGroup {
+    margin: 20px 40px 0;
+  }
+
+  .formSelect {
+    margin: 20px 40px 0;
+    max-width: -webkit-fill-available;
+    border: 0;
+    padding-left: 0;
+    background-position: right 0 center;
+    width: calc(50% - 83px);
+    display: inline-block;
+  }
+
+  .thBtn {
+    margin: 30px 40px 40px;
+    width: -webkit-fill-available;
+  }
+}
+
+@media (max-width: 575px) {
+  .formGroup {
+    margin: 20px 30px 0;
+  }
+
+  .formSelect {
+    margin: 20px 30px 0;
+    width: calc(50% - 63px);
+  }
+
+  .thBtn {
+    margin: 30px 30px 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .formSelect {
+    width: 100%;
+  }
+}
+
+.cardWrapper {
+  /* --bs-gutter-x: 1.5rem; */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 2%;
+  width: 100%;
+  /* margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+  --bs-gutter-y: 40px; */
+}
+
+@media (min-width: 1300px) {
+  .row {
+    --bs-gutter-x: 24px;
+  }
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.pagination ul {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 0.5%;
+}
+
+.pagination ul li {
+  list-style: none;
+}
+
+.paginationLink {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--theme-color);
+  color: var(--theme-color);
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--title-font);
+  border-radius: 50%;
+  cursor: pointer;
+
+  text-decoration: none;
+}
+
+.paginationLink:hover,
+.paginationLink:active {
+  color: var(--white-color);
+  background-color: var(--theme-color);
+  outline: none;
+}
+
+.selectedPage {
+  background-color: var(--theme-color);
+  color: var(--white-color);
+}
+
+.nextPage {
+  width: auto;
+  padding: 0 24px;
+  border-radius: 30px;
+  line-height: 46px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--theme-color);
+  color: var(--theme-color);
+  background-color: transparent;
+  height: 48px;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--title-font);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nextPage:hover,
+.nextPage:active {
+  color: var(--white-color);
+  background-color: var(--theme-color);
+  outline: none;
+}
+
+/* ///////////////////////////////////////////// MObile view ////////////////////////////////////////////////  */
+
+@media screen and (max-width: 768px) {
+  .propertiContainer {
+    padding-bottom: 10px;
+    padding-top: 5%;
+    background-color: var(--smoke-color);
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .searchForm {
+    display: flex;
+    border: 1px solid var(--theme-color);
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    padding-right: 0px;
+    margin-bottom: 64px;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .searchForm label {
+    flex: none;
+    padding: 0% 2%;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    line-height: 60px;
+  }
+
+  .formGroup {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    margin-left: 6%;
+    margin-bottom: 0;
+    position: relative;
+    width: 86%;
+  }
+
+  .iconSearch {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: var(--theme-color);
+  }
+
+  .formSelect:focus {
+    outline: none;
+  }
+
+  .thBtn {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 7vw;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cardWrapper {
+    /* --bs-gutter-x: 1.5rem; */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2%;
+    width: 100%;
+  }
+  .formSelect {
+    width: 100%;
+    border: 1px solid gray;
+    padding: 2%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .pagination {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .pagination ul {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 0.5%;
+  }
+
+  .pagination ul li {
+    list-style: none;
+  }
+
+  .paginationLink {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
+    background-color: transparent;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--title-font);
+    border-radius: 50%;
+
+    text-decoration: none;
+  }
+
+  .paginationLink:hover,
+  .paginationLink:active {
+    color: var(--white-color);
+    background-color: var(--theme-color);
+    outline: none;
+  }
+
+  .nextPage {
+    width: auto;
+    padding: 0 24px;
+    border-radius: 30px;
+    line-height: 46px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--theme-color);
+    color: var(--theme-color);
+    background-color: transparent;
+    height: 48px;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--title-font);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    justify-content: center;
+  }
+
+  .nextPage:hover,
+  .nextPage:active {
+    color: var(--white-color);
+    background-color: var(--theme-color);
+    outline: none;
+  }
+
+  /* //////////////////////////// filter css ////////////////////////////////// */
+
+  .searchForm {
+    align-items: start;
+    padding: 2%;
+  }
+  .searchForm input {
+    width: 100%;
+    padding: 2% 0.5%;
+  }
+
+  .rent {
+    display: flex;
+    border: 1px solid var(--theme-color);
+    margin-top: 4%;
+  }
+  .rent p {
+    padding: 8px 10px;
+    cursor: pointer;
+  }
+
+  .selectPriceBox {
+    position: relative;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    right: 0%;
+    background-color: var(--theme-color);
+    color: var(--white-color);
+    padding: 2%;
+    border-radius: 0.5rem;
+    margin-top: 3vh;
+  }
+  .selectPriceBox::after {
+    content: "";
+    height: 3vh;
+    width: 3vh;
+    position: absolute;
+    background-color: var(--theme-color);
+    top: -1.5vh;
+    transform: rotate(-45deg);
+    left: 8%;
+  }
+
+  .selectPriceBox p {
+    width: 100%;
+  }
+
+  .selectPriceBox input {
+    margin-bottom: 3%;
+  }
+
+  .searchForm select {
+    width: 100%;
+    padding: 2% 0.5%;
+    margin-top: 3%;
+  }
+  .PriceBtn {
+    position: relative;
+    margin-top: 3%;
+  }
+
+  /* //////////////////////////// filter css  end////////////////////////////////// */
+}

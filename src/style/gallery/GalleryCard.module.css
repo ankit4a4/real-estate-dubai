@@ -1,0 +1,104 @@
+.Gallery_container {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 5%;
+}
+
+.galleryCard {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.GalleryCardImageBox {
+  width: 100%;
+  height: 40vh;
+  border-radius: 1rem;
+  position: relative;
+}
+.GalleryCardImageBox img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.ImageDetails {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  padding: 5%;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.4s;
+}
+
+.GalleryCardImageBox:hover .ImageDetails {
+  top: 0;
+}
+.ImageDetails p {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.LoadMoreButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  color: var(--theme-color);
+  cursor: pointer;
+}
+
+.LoadMoreButton button {
+  border-radius: 0.5rem;
+  background-color: var(--theme-color);
+  color: white;
+  cursor: pointer;
+  padding: 1.4% 4%;
+  border: 1px solid var(--theme-color);
+  font-size: 1.2rem;
+}
+
+/* /////////////////////////// mobile view ////////////////////////// */
+@media screen and (max-width: 768px) {
+  .Gallery_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .GalleryCardImageBox {
+    width: 100%;
+    height: 20vh;
+    border-radius: 1rem;
+    position: relative;
+  }
+
+  .ImageDetails {
+    font-size: 1rem;
+  }
+
+  .GalleryCardImageBox:hover .ImageDetails {
+    top: 0;
+  }
+  .ImageDetails p {
+    -webkit-line-clamp: 5;
+  }
+
+  .LoadMoreButton button {
+    font-size: 1rem;
+  }
+}
